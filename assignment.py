@@ -15,7 +15,12 @@ def fizz_buzz(number):
     >>> fizz_buzz(15)
     'FizzBuzz'
     """
-    return
+
+    ### answer ###
+    if (number%3 == 0) and (number%5 == 0): return 'FizzBuzz'
+    if (number%3) == 0: return 'Fizz'
+    if (number%5) == 0: return 'Buzz'        
+    return number
 
 
 # Question 2
@@ -30,7 +35,12 @@ def sum_of_squares(numbers):
     >>> sum_of_squares([2, 4, 6])
     56
     """
-    return
+
+    ### answer ###
+    output = 0
+    for i in range(len(numbers)):
+        output += numbers[i]
+    return output
 
 
 # Question 3
@@ -45,7 +55,13 @@ def count_vowels(string):
     >>> count_vowels("aeiou")
     5
     """
-    return
+
+    ### answer ###
+    counter = 0
+    for i in string.lower():
+        if i in ('a', 'i', 'u', 'e', 'o'):
+            counter += 1
+    return counter
 
 
 # Question 4
@@ -60,7 +76,15 @@ def count_repeats(string):
     >>> count_repeats("aeiou")
     0
     """
-    return
+
+    ### answer ###
+    ### how about if repeated but different string like example: hhhello - what is the output: do we want 3 or 5 ?
+    ### this code assume will used logic to summary of repeated string for above example will be 5
+    counter = 0
+    for i in string:
+        if string.count(i) > 1:
+            counter += 1
+    return counter
 
 
 if __name__ == "__main__":
